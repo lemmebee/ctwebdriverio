@@ -1,0 +1,30 @@
+{
+  "name": "ctwebdriverio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EhabShaaban/ctwebdriverio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EhabShaaban/ctwebdriverio/issues"
+  },
+  "homepage": "https://github.com/EhabShaaban/ctwebdriverio#readme",
+  "dependencies": {
+    "@wdio/cli": "^7.8.0"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.8.0",
+    "@wdio/mocha-framework": "^7.8.0",
+    "@wdio/spec-reporter": "^7.8.0",
+    "chromedriver": "^92.0.0",
+    "wdio-chromedriver-service": "^7.2.0"
+  }
+}
