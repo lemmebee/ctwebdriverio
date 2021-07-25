@@ -10,7 +10,9 @@ class LoginPage extends Page {
     get inputUsername () { return $('#email') }
     get inputPassword () { return $('#pass') }
     get btnSubmit () { return $('#send2') }
-    get invalidLoginErrorMessage () { return $('li[class="error-msg"] span') }
+    get spanInvalidLoginErrorMessage () { return $('li[class="error-msg"] span') }
+    get divEmptyEmailValidation () { return $('#advice-required-entry-email') }
+    get divEmptyPasswordValidation () { return $('#advice-required-entry-pass') }
 
     /**
      * a method to encapsule automation code to interact with the page
