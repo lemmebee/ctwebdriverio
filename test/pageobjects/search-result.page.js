@@ -8,7 +8,7 @@ class SearchResult extends Page {
         await (await this.inputSearch).setValue(searchText);
     }
 
-    async selectItem () {
+    async chooseItem () {
         await (await this.aSelectedItem).click();
     }
 }
