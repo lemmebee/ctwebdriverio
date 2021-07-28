@@ -7,7 +7,8 @@
     "tests": "./node_modules/.bin/wdio run wdio.conf.js",
     "sale:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec products-on-sale.e2e.js",
     "cart:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec add-to-cart.e2e.js",
-    "login:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec login.e2e.js"
+    "login:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec login.e2e.js",
+    "allure:report": "allure generate allure-results/ --clean && allure open"
   },
   "repository": {
     "type": "git",
