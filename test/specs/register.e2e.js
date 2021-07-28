@@ -18,7 +18,6 @@ describe('Register users test suite', () => {
         let successMessage = await AccountDashboard.spanRegisterSuccessMessage;
         await expect(successMessage).toHaveTextContaining('Thank you for registering with Madison Island.');
 
-
     });
 
 });
