@@ -21,5 +21,3 @@ describe('Register users test suite', () => {
     });
 
 });
-
-
