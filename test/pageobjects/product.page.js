@@ -1,4 +1,4 @@
-const Page = require('./page');
+import Page from './page'
 
 class ProductPage extends Page {
 

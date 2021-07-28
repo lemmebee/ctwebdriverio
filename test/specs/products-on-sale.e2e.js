@@ -1,4 +1,4 @@
-const SalePage = require('../pageobjects/sale.page');
+import SalePage from '../pageobjects/sale.page'
 
 describe('products on sale test suite', () => {
 

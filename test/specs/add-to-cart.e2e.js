@@ -1,7 +1,7 @@
-const HomePage = require('../pageobjects/home.page');
-const SearchResult = require('../pageobjects/search-result.page');
-const ProductPage = require('../pageobjects/product.page');
-const CartPage = require('../pageobjects/cart.page');
+import HomePage from '../pageobjects/home.page'
+import SearchResult from '../pageobjects/search-result.page'
+import ProductPage from '../pageobjects/product.page'
+import CartPage from '../pageobjects/cart.page'
 
 describe('add to cart test suite', () => {
 
