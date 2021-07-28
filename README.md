@@ -10,4 +10,4 @@
 > Run tests in headless mode
 + Add new arg ``'--headless'`` to ``capabilities`` in ``wdio.conf.js`` and run again with previous commands
 > Generate allure test reports
-+ ``allure:report`` to generate and open test report
++ ``npm run allure:report`` to generate and open test report
