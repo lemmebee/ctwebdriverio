@@ -2,7 +2,6 @@ import LoginPage from '../pageobjects/login.page'
 import * as loginCreds from '../json-helper/registered-user.json'
 import AccountDashboard from '../pageobjects/account-dashboard.page'
 
-
 describe('Login test suite', () => {
 
     it('should not login with invalid credentials', async () => {
@@ -34,7 +33,6 @@ describe('Login test suite', () => {
         await LoginPage.login(loginCreds.user.email, loginCreds.user.password);
         await expect(AccountDashboard.h1DashboardLabel).toBeExisting();
         await expect(AccountDashboard.h1DashboardLabel).toHaveTextContaining('MY DASHBOARD');
-
         await expect(AccountDashboard.strongGreetings).toBeExisting();
         await expect(AccountDashboard.strongGreetings).toHaveTextContaining('Hello, '+loginCreds.user.firstName+' '+loginCreds.user.lastName+'!');
 
