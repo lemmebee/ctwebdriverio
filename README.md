@@ -7,6 +7,7 @@
 + ``npm run sale:suite`` to run sale suite
 + ``npm run cart:suite`` to run cart suite
 + ``npm run login:suite`` to run login suite
++ ``npm run register:suite`` to run register suite
 > Run tests in headless mode
 + Add new arg ``'--headless'`` to ``capabilities`` in ``wdio.conf.js`` and run again with previous commands
 > Generate allure test reports
