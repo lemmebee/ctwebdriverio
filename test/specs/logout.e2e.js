@@ -1,10 +1,13 @@
 import LoginPage from '../pageobjects/login.page'
 import * as loginCreds from '../json-helper/registered-user.json'
 import AccountDashboard from '../pageobjects/account-dashboard.page'
+import allureReporter from '@wdio/allure-reporter'
 
 describe('Logout test suite', () => {
 
     it('should logout successfully', async () => {
+
+        allureReporter.addSeverity('normal');
 
         await LoginPage.open();
         await LoginPage.login(loginCreds.user.email, loginCreds.user.password);

@@ -1,10 +1,13 @@
 import LoginPage from '../pageobjects/login.page'
 import * as loginCreds from '../json-helper/registered-user.json'
 import AccountDashboard from '../pageobjects/account-dashboard.page'
+import allureReporter from '@wdio/allure-reporter'
 
 describe('Login test suite', () => {
 
     it('should not login with invalid credentials', async () => {
+
+        allureReporter.addSeverity('critical');
         
         await LoginPage.open();
         await LoginPage.login('test@test.com', 'ThisIs@T3st');
@@ -15,6 +18,8 @@ describe('Login test suite', () => {
     });
 
     it('should not login with empty credentials', async () => {
+
+        allureReporter.addSeverity('critical');
 
         await LoginPage.open();
         await LoginPage.login('', '');
@@ -28,6 +33,8 @@ describe('Login test suite', () => {
     });
 
     it('should login with valid credentials', async () => {
+
+        allureReporter.addSeverity('critical');
 
         await LoginPage.open();
         await LoginPage.login(loginCreds.user.email, loginCreds.user.password);

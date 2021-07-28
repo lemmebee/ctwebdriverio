@@ -2,10 +2,14 @@ import HomePage from '../pageobjects/home.page'
 import SearchResult from '../pageobjects/search-result.page'
 import ProductPage from '../pageobjects/product.page'
 import CartPage from '../pageobjects/cart.page'
+import allureReporter from '@wdio/allure-reporter'
+
 
 describe('add to cart test suite', () => {
 
     it('should add item to cart successfully', async () => {
+
+        allureReporter.addSeverity('critical');
 
         await HomePage.open();
         await HomePage.search('shirt\n');

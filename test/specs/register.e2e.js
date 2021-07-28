@@ -1,10 +1,13 @@
 import RegisterPage from '../pageobjects/register.page'
 import AccountDashboard from '../pageobjects/account-dashboard.page'
+import allureReporter from '@wdio/allure-reporter'
 import faker from 'faker'
 
 describe('Register users test suite', () => {
 
     it('should be able to create new user', async () => {
+        
+        allureReporter.addSeverity('critical');
 
         let usrInfo = {
             firstName     : faker.name.firstName(),

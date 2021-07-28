@@ -1,9 +1,12 @@
 import SalePage from '../pageobjects/sale.page'
 import HomePage from '../pageobjects/home.page'
+import allureReporter from '@wdio/allure-reporter'
 
 describe('products on sale test suite', () => {
 
     it('should filter products on sale with price filter from 100 to 199.99', async () => {
+
+        allureReporter.addSeverity('normal');
 
         await SalePage.open();
         let onsalePrice = await SalePage.spanSpecialPriceList;
@@ -15,6 +18,8 @@ describe('products on sale test suite', () => {
     });
 
     it('should filter products on sale with price filter from 200 to above', async () => {
+
+        allureReporter.addSeverity('normal');
 
         await HomePage.open();
         await HomePage.navigateToSalePage();
@@ -29,6 +34,8 @@ describe('products on sale test suite', () => {
 
     it('should filter products on sale with men only', async () => {
 
+        allureReporter.addSeverity('normal');
+
         await SalePage.routeSaleGenderOnly('men');
         let gender = await SalePage.aMen;
         await expect(gender).toHaveTextContaining('Male');
@@ -36,6 +43,8 @@ describe('products on sale test suite', () => {
     });
 
     it('should filter products on sale with women only', async () => {
+
+        allureReporter.addSeverity('normal');
 
         await SalePage.routeSaleGenderOnly('women');
         let gender = await SalePage.aWomen;
