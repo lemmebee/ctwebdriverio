@@ -9,6 +9,7 @@
     "cart:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec add-to-cart.e2e.js",
     "login:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec login.e2e.js",
     "register:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec register.e2e.js",
+    "logout:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec logout.e2e.js",
     "allure:report": "allure generate allure-results/ --clean && allure open"
   },
   "repository": {
