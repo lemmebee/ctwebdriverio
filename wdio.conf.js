@@ -24,7 +24,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        'test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -57,12 +57,17 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
         browserName: 'chrome',
         acceptInsecureCerts: true,
         'goog:chromeOptions': {
             args: [
+                '--no-sandbox',
+                // '--headless',
+                '--disable-gpu',
+                '--disable-dev-shm-usage',
+                '--disable-setuid-sandbox',
                 '--window-size=1920,1080'
                 ],
         }
@@ -155,6 +160,8 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
+        // Babel setup
+        require: ['@babel/register'],
         ui: 'bdd',
         timeout: 60000
     },
