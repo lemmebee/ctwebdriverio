@@ -1,11 +1,12 @@
 import Page from './page'
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * Login sub page containing specific selectors and methods
  */
 class LoginPage extends Page {
+    
     /**
-     * define selectors using getter methods
+     * web selectors using getter methods
      */
     get inputUsername () { return $('#email') }
     get inputPassword () { return $('#pass') }
@@ -15,8 +16,9 @@ class LoginPage extends Page {
     get divEmptyPasswordValidation () { return $('#advice-required-entry-pass') }
 
     /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
+     * Login behaviour to the system
+     * @param {String} username -username used in login
+     * @param {String} password -password used in login
      */
     async login (username, password) {
         await (await this.inputUsername).setValue(username);
@@ -25,7 +27,7 @@ class LoginPage extends Page {
     }
 
     /**
-     * overwrite specifc options to adapt it to page object
+     * overwrite base url
      */
     open () {
         return super.open('customer/account/login/');

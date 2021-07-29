@@ -3,6 +3,10 @@ import AccountDashboard from '../pageobjects/account-dashboard.page'
 import allureReporter from '@wdio/allure-reporter'
 import faker from 'faker'
 
+/**
+ * This is a test file containing tests for the following
+ * behaviour on ctqatest.biz/ecom/: Register new users
+ */
 describe('Register users test suite', () => {
 
     it('should be able to create new user', async () => {

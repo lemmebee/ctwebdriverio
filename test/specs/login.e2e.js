@@ -3,6 +3,10 @@ import * as loginCreds from '../json-helper/registered-user.json'
 import AccountDashboard from '../pageobjects/account-dashboard.page'
 import allureReporter from '@wdio/allure-reporter'
 
+/**
+ * This is a test file containing tests for the following
+ * behaviour on ctqatest.biz/ecom/: Login feature
+ */
 describe('Login test suite', () => {
 
     it('should not login with invalid credentials', async () => {

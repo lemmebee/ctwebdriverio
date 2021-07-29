@@ -2,6 +2,11 @@ import SalePage from '../pageobjects/sale.page'
 import HomePage from '../pageobjects/home.page'
 import allureReporter from '@wdio/allure-reporter'
 
+/**
+ * This is a test file containing tests for the following
+ * behaviour on ctqatest.biz/ecom/: Apply multiple filters
+ * for products that are on sale only
+ */
 describe('Products on sale test suite', () => {
 
     it('should filter products on sale with price filter from 100 to 199.99', async () => {

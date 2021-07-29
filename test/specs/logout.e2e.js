@@ -3,6 +3,10 @@ import * as loginCreds from '../json-helper/registered-user.json'
 import AccountDashboard from '../pageobjects/account-dashboard.page'
 import allureReporter from '@wdio/allure-reporter'
 
+/**
+ * This is a test file containing tests for the following
+ * behaviour on ctqatest.biz/ecom/: Logout feature
+ */
 describe('Logout test suite', () => {
 
     it('should logout successfully', async () => {
