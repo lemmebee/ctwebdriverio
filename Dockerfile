@@ -12,10 +12,10 @@ RUN apt-get install -y wget
 RUN apt-get install -y wmctrl
 RUN apt-get install -y curl
 
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
+RUN wget http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_92.0.4515.107-1_amd64.deb
 RUN apt-get update && apt-get install -f
-RUN apt-get -y install google-chrome-stable
+RUN apt-get install libgconf2-4 libnss3-1d libxss1 fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libcairo2 libcups2 libgbm1 libgtk-3-0 xdg-utils -y
+RUN dpkg -i google-chrome-stable_92.0.4515.107-1_amd64.deb
 RUN google-chrome --version
 
 ENV NVM_DIR /usr/local/nvm
