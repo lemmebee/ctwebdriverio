@@ -1,3 +1,7 @@
+> node version: v16.2.0 \
+> npm version: 7.13.0 \
+> chrome version: Google Chrome 92.0.4515.107
+
 #### Setup
 + Run ``npm install``
 
@@ -18,9 +22,5 @@
     + Run ``docker pull ehabshaaban/ctwebdriverio:v.03``
     + Run ``docker run -it ehabshaaban/ctwebdriverio:v.03``
 
-> Generate allure test reports
-+ ``npm run allure:report`` to generate and open test report
-
-> node version: v16.2.0 \
-> npm version: 7.13.0 \
-> chrome version: Google Chrome 92.0.4515.107
++ Generate allure test reports
+    + ``npm run allure:report`` to generate and open test report
