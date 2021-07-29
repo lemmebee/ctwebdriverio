@@ -2,7 +2,7 @@ import SalePage from '../pageobjects/sale.page'
 import HomePage from '../pageobjects/home.page'
 import allureReporter from '@wdio/allure-reporter'
 
-describe('products on sale test suite', () => {
+describe('Products on sale test suite', () => {
 
     it('should filter products on sale with price filter from 100 to 199.99', async () => {
 

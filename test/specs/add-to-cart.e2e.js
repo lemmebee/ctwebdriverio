@@ -5,7 +5,7 @@ import CartPage from '../pageobjects/cart.page'
 import allureReporter from '@wdio/allure-reporter'
 
 
-describe('add to cart test suite', () => {
+describe('Add to cart test suite', () => {
 
     it('should add item to cart successfully', async () => {
 
