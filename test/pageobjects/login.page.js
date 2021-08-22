@@ -1,19 +1,24 @@
-const Page = require('./page');
+import Page from './page'
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * Login sub page containing specific selectors and methods
  */
 class LoginPage extends Page {
+    
     /**
-     * define selectors using getter methods
+     * web selectors using getter methods
      */
-    get inputUsername () { return $('#username') }
-    get inputPassword () { return $('#password') }
-    get btnSubmit () { return $('button[type="submit"]') }
+    get inputUsername () { return $('#email') }
+    get inputPassword () { return $('#pass') }
+    get btnSubmit () { return $('#send2') }
+    get spanInvalidLoginErrorMessage () { return $('li[class="error-msg"] span') }
+    get divEmptyEmailValidation () { return $('#advice-required-entry-email') }
+    get divEmptyPasswordValidation () { return $('#advice-required-entry-pass') }
 
     /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
+     * Login behaviour to the system
+     * @param {String} username -username used in login
+     * @param {String} password -password used in login
      */
     async login (username, password) {
         await (await this.inputUsername).setValue(username);
@@ -22,10 +27,10 @@ class LoginPage extends Page {
     }
 
     /**
-     * overwrite specifc options to adapt it to page object
+     * overwrite base url
      */
     open () {
-        return super.open('login');
+        return super.open('customer/account/login/');
     }
 }
 

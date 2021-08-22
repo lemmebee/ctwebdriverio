@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tests": "./node_modules/.bin/wdio run wdio.conf.js",
+    "sale:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec products-on-sale.e2e.js",
+    "cart:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec add-to-cart.e2e.js",
+    "login:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec login.e2e.js",
+    "register:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec register.e2e.js",
+    "logout:suite": "./node_modules/.bin/wdio run wdio.conf.js --spec logout.e2e.js",
+    "allure:report": "allure generate allure-results/ --clean && allure open"
   },
   "repository": {
     "type": "git",
@@ -18,9 +24,13 @@
   },
   "homepage": "https://github.com/EhabShaaban/ctwebdriverio#readme",
   "dependencies": {
-    "@wdio/cli": "^7.8.0"
+    "@wdio/cli": "^7.8.0",
+    "faker": "^5.5.3"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.14.8",
+    "@babel/register": "^7.14.5",
+    "@wdio/allure-reporter": "^7.8.0",
     "@wdio/local-runner": "^7.8.0",
     "@wdio/mocha-framework": "^7.8.0",
     "@wdio/spec-reporter": "^7.8.0",
