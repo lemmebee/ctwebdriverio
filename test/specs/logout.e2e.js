@@ -21,6 +21,7 @@ describe('Logout test suite', () =>
         await expect(AccountDashboard.h1DashboardLabel).toHaveTextContaining('MY DASHBOARD');
         await AccountDashboard.logout();
         await expect(browser).toHaveUrl('http://www.ctqatest.biz/ecom/customer/account/logoutSuccess/');
+        await expect(browser).toHaveUrl('http://www.ctqatest.iguessso/logoutSuccess/');
 
         cosnst password = "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";
         
