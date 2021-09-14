@@ -64,7 +64,7 @@ exports.config = {
         'goog:chromeOptions': {
             args: [
                 '--no-sandbox',
-                // '--headless',
+                '--headless',
                 '--disable-gpu',
                 '--disable-dev-shm-usage',
                 '--disable-setuid-sandbox',
